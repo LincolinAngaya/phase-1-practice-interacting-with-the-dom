@@ -1,14 +1,15 @@
-const counter = document.getElementById('counter')
-const decrementCount = document.getElementById("minus")
 const incrementCount = document.getElementById("plus")
+const decrementCount = document.getElementById("minus")
+const counter = document.getElementById('counter')
 const heart = document.getElementById("heart")
 const pause = document.getElementById("pause")
 const submit = document.getElementById("comment-form")
-
 let count = 0;
 
 function myFunc()
 c = setInterval(() => {
+
+
         counter.innerHTML++;
     }, 1000)
     //function to increment the counter
@@ -28,18 +29,17 @@ const pauseTime = () => {
     }
 }
 let num = 0;
-//creating an element
 
 function likes() {
     let like = document.querySelector(".likes")
-    let ul = document.createElement("ul")
-    let li = document.createElement("li")
+    let likeul = document.createElement("ul")
+    let likeli = document.createElement("li")
     let currentCount = counter.innerHTML;
     if (num >= 0) {
         num++;
-        li.innerHTML = `${currentCount} has been liked ${num} time`;
-        like.append(ul);
-        ul.append(li);
+        likeli.innerHTML = `${currentCount} has been liked ${num} time`;
+        like.append(likeul);
+        likeul.append(likeli);
     }
 }
 
